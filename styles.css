@@ -91,7 +91,7 @@ body {
 	border-bottom: white 1px solid;
 }
 
-.showcase {
+.head-display {
 	background-color: grey;
 	
 	width: 100%;
@@ -148,7 +148,7 @@ body {
 		border-bottom: black 1px solid;
 	}
 	
-	.showcase {
+	.head-display {
 		height: 500px;
 	}
 }
