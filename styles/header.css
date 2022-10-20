@@ -73,7 +73,7 @@
 }
 
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 720px) {
 	.sidebar-transition {
 		transition: width 1s, left 1s;
 	}
@@ -82,7 +82,7 @@
 /**
  * For Desktop
  */
-@media only screen and (min-width: 765px) {
+@media only screen and (min-width: 720px) {
 	.top-bar {
 		justify-content: center;
 		position: static;
