@@ -1,3 +1,16 @@
+:root {
+	--sidebar-width-show: 40%;
+	--sidebar-width-hide: 0;
+	--sidebar-width: var(--sidebar-width-hide);
+	
+	--header-color: white;
+	--header-background: black;
+}
+
+.sidebar-transition {
+		transition: width 1s, left 1s;
+}
+
 .header {
 	display: flex;
 	flex-direction: column;
@@ -13,28 +26,33 @@
 	left: var(--sidebar-width);
 	width: calc(100% - var(--sidebar-width));
 
-	border-bottom: black 2px solid;
+	border-bottom: var(--main-color) 2px solid;
 }
 
 .top-bar button {
 	border: none;
-	border-right: black 1px solid;
+	border-right: var(--main-color) 1px solid;
 	background-color: inherit;
 	cursor: pointer;
 }
 
+.top-bar button:active {
+	background-color: var(--background-accent);
+}
+
 .top-bar h1 {
 	margin: 0;
-	padding: 10px;
 }
 
 .top-bar a {
 	text-decoration: none;
-	color: black;
+	color: var(--main-color);
+	
+	padding: 10px;
 }
 
 .sidebar {
-	background-color: black;
+	background-color: var(--header-background);
 	list-style-type: none;
 	overflow: hidden;
 
@@ -45,40 +63,42 @@
 	width: var(--sidebar-width);
 	padding: 0;
 	margin: 0;
+	z-index: 1;
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
 .sidebar a {
-	color: white;
+	color: var(--header-color);
 	text-decoration: none;
 
 	height: 80px;
-	width: var(--sidebar-width-show);
+	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .link {
-	margin-right: 10px;
+	
 	display: flex;
-	justify-content: center;
+	align-items: center;
 	padding: 0 1px;
 }
 
 .current-page span {
-	border-bottom: white 1px solid;
+	border-bottom: var(--header-color) 1px solid;
 }
-
-
-@media only screen and (max-width: 720px) {
-	.sidebar-transition {
-		transition: width 1s, left 1s;
+	
+	
+@media only screen and (max-width: 450px) {
+	:root {
+		--sidebar-width-show: 60%;
 	}
 }
-
+	
 /**
  * For Desktop
  */
@@ -106,7 +126,7 @@
 	}
 
 	.sidebar a {
-		color: black;
+		color: var(--main-color);
 
 		width: 200px;
 		height: 80px;
@@ -120,10 +140,6 @@
 	}
 
 	.current-page span {
-		border-bottom: black 1px solid;
-	}
-
-	.head-display {
-		height: 500px;
+		border-bottom: var(--main-color) 1px solid;
 	}
 }

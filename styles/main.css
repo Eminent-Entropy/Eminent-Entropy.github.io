@@ -1,7 +1,7 @@
 :root {
-	--sidebar-width-show: 60%;
-	--sidebar-width-hide: 0;
-	--sidebar-width: var(--sidebar-width-hide);
+	--main-color: black;
+	--background-color: silver;
+	--background-accent: grey;
 }
 
 * {
@@ -10,7 +10,8 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: silver;
+	color: var(--main-color);
+	background-color: var(--background-color);
 	margin: 0;
 }
 
@@ -20,8 +21,65 @@ body {
 }
 
 .head-display {
-	background-color: grey;
+	background-color: var(--background-accent);
 
 	width: 100%;
 	height: 300px;
+	position: relative;
+}
+
+.head-display img {
+	width: inherit;
+	height: inherit;
+}
+
+.head-display a {
+	color: var(--main-color);
+	background-color: var(--background-color);
+	text-decoration: none;
+	font-size: 18px;
+	border: var(--main-color) 2px solid;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 60%;
+	height: 50px;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.head-display a:active {
+	background-color: var(--background-accent);
+}
+
+.body-container {
+	width: 100%;
+	text-align: center;
+}
+
+
+/**
+ * For Desktop
+ */
+@media only screen and (min-width: 720px) {
+	.head-display {
+		height: 500px;
+	}
+	
+	.head-display a {
+		font-size: 20px;
+		
+		height: 100px;
+		width: 70%;
+	}
+	
+	.body-container {
+		position: static;
+		width: 100%;
+	}
 }
