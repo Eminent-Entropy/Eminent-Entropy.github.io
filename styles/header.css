@@ -4,7 +4,7 @@
 	--sidebar-width: var(--sidebar-width-hide);
 	
 	--header-color: white;
-	--header-background: black;
+	--header-background: #333A51;
 }
 
 .sidebar-transition {
