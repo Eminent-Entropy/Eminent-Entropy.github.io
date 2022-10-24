@@ -15,9 +15,7 @@ sidebarToggle = function() {
 	}
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-	document.getElementById("side-bar-toggle").addEventListener("click", sidebarToggle);
-});
+document.getElementById("side-bar-toggle").addEventListener("click", sidebarToggle);
 
 
 /**
