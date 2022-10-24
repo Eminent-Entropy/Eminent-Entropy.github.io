@@ -1,7 +1,7 @@
 /**
  * Toggles whether the side bar (on mobile) is shown or hidden on button press
  */
-sidebarToggle = function() {
+document.getElementById("side-bar-toggle").addEventListener("click", () => {
 	let root = document.querySelector(':root');
 	let rootStyle = getComputedStyle(root);
 	let sidebarShow = rootStyle.getPropertyValue('--sidebar-width-show');
@@ -13,9 +13,7 @@ sidebarToggle = function() {
 	else {
 		root.style.setProperty('--sidebar-width', 'var(--sidebar-width-hide)');
 	}
-};
-
-document.getElementById("side-bar-toggle").addEventListener("click", sidebarToggle);
+});
 
 
 /**
