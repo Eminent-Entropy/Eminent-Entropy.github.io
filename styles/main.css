@@ -79,6 +79,7 @@ body {
 }
 
 
+/** BREAKPOINTS **/
 
 /**
  * For Small and Medium Mobile
@@ -109,6 +110,9 @@ body {
 		width: 100%;
 	}
 }
+
+
+/** FONTS **/
 
 /* latin-ext */
 @font-face {
