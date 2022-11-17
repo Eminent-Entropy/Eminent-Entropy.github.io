@@ -97,11 +97,6 @@ body {
 	#head-display {
 		height: 450px;
 	}
-	
-	.body-container {
-		position: static;
-		width: 100%;
-	}
 }
 
 
