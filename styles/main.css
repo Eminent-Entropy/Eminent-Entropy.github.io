@@ -38,7 +38,7 @@ body {
 	background-size: contain;
 	background-position: -5% 0;
 	height: inherit;
-	width: 48000px;
+	width: 160000px;
 	animation: slide 400s linear infinite;
 	filter: blur(2px);
 }
@@ -56,8 +56,9 @@ body {
 	color: var(--main-color);
 	background-color: var(--background-color);
 	text-decoration: none;
-	font-weight: bold;
 	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.25em;
 	
 	white-space: pre;
 	padding: 10px 20px;
@@ -78,10 +79,20 @@ body {
 }
 
 
+
 /**
- * For Desktop
+ * For Small and Medium Mobile
  */
-@media only screen and (min-width: 720px) {
+@media only screen and (max-width: 425px) {
+	body {
+		font-size: 3.76vw;
+	}
+}
+
+/**
+ * For Tablet and Desktop
+ */
+@media only screen and (min-width: 768px) {
 	#head-display {
 		height: 450px;
 	}
