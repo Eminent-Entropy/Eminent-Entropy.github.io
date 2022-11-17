@@ -3,8 +3,8 @@
 	--sidebar-width-hide: 0;
 	--sidebar-width: var(--sidebar-width-hide);
 	
-	--header-color: white;
-	--header-background: #333A51;
+	--header-color: black;
+	--header-background: #6AA5E1;
 }
 
 .sidebar-transition {
@@ -83,7 +83,8 @@
 }
 
 #links a:active {
-	border: 2px var(--header-color) solid;
+	color: var(--main-color);
+	background-color: var(--background-color);
 }
 
 .current-page span {
