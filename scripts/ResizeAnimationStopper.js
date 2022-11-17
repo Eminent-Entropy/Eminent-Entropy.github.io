@@ -1,7 +1,7 @@
 /**
  * Stops animations and transitions during window resizing
  */
- class ResizeAnimationStopper {
+class ResizeAnimationStopper {
 	constructor(duration) {
 		this.duration = duration;
 		window.addEventListener("resize", () => this.stopAnimations());

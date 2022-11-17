@@ -8,7 +8,7 @@ class SidebarToggle {
 		this.sidebarShow = '--sidebar-width-show';
 		this.sidebarHide = '--sidebar-width-hide';
 		
-		this.root.style.setProperty('--sidebar-width', 'var(--sidebar-width-hide)');
+		this.root.style.setProperty(this.sidebarWidth, `var(${this.sidebarHide})`);
 		button.addEventListener("click", () => this.toggleSidebar());
 	}
 	
