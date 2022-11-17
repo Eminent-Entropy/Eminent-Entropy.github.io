@@ -20,23 +20,34 @@ body {
 	transition: none !important;
 }
 
-.head-display {
+#head-display {
 	background-color: var(--background-accent);
-
 	width: 100%;
 	height: 300px;
 	position: relative;
 	overflow: hidden;
 }
 
-.head-display img {
+#banner {
+	background-image: url('../images/artbanner.jpg');
+	background-repeat: repeat-x;
+	background-size: contain;
 	height: inherit;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+	width: 48000px;
+	animation: slide 400s linear infinite;
+	filter: blur(2px);
 }
 
-.head-display a {
+@keyframes slide {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-16000px, 0, 0);
+	}
+}
+
+#head-display a {
 	color: var(--main-color);
 	background-color: var(--background-color);
 	text-decoration: none;
@@ -47,7 +58,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	
-	width: 60%;
+	width: 40%;
 	height: 50px;
 	
 	position: absolute;
@@ -56,7 +67,7 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.head-display a:active {
+#head-display a:active {
 	background-color: var(--background-accent);
 }
 
@@ -70,15 +81,15 @@ body {
  * For Desktop
  */
 @media only screen and (min-width: 720px) {
-	.head-display {
+	#head-display {
 		height: 450px;
 	}
 	
-	.head-display a {
+	#head-display a {
 		font-size: 20px;
 		
 		height: 100px;
-		width: 70%;
+		width: 50%;
 	}
 	
 	.body-container {
