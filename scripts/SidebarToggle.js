@@ -30,4 +30,7 @@ class SidebarToggle {
 		this.sidebarShowValue = this.rootStyle.getPropertyValue(this.sidebarShow);
 	}
 }
-sidebarToggle = new SidebarToggle(document.getElementById("side-bar-toggle"));
+
+document.addEventListener('DOMContentLoaded', () => {
+	sidebarToggle = new SidebarToggle(document.getElementById("side-bar-toggle"));
+});

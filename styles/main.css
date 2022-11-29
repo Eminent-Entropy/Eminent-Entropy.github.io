@@ -34,12 +34,16 @@ body {
 	overflow: hidden;
 }
 
-.scroll-banner {
-	height: inherit;
-  background-repeat: repeat-x;
+.banner {
+  height: inherit;
+  width: 100%;
+}
+
+.scroll {
+	background-repeat: repeat-x;
 	background-size: contain;
 	background-position: -5% 0;
-  width: 160000px;
+	width: 160000px;
 	animation: slide 400s linear infinite;
 	filter: blur(2px);
 }
@@ -55,13 +59,6 @@ body {
 	100% {
 		transform: translate3d(-16000px, 0, 0);
 	}
-}
-
-.banner {
-  height: inherit;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #head-display a {

@@ -15,4 +15,7 @@ class ResizeAnimationStopper {
 		}, this.duration);
 	}
 }
-resizeAnimationStopper = new ResizeAnimationStopper(100);
+
+document.addEventListener('DOMContentLoaded', () => {
+	resizeAnimationStopper = new ResizeAnimationStopper(100);
+});

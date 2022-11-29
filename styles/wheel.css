@@ -1,0 +1,36 @@
+#spin-banner {
+	background-image: url('../images/spin.gif');
+	background-size: 100% 100%;
+}
+
+#spin-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+#spin-buttons button {
+	color: var(--main-color);
+	background-color: var(--background-color);
+	border: 1px solid var(--main-color);
+	padding: 10px;
+	margin: 0 10px;
+}
+
+#spin-buttons button:active {
+	background-color: var(--background-accent);
+}
+
+#spin-wheels iframe {
+	margin: 10px;
+}
+
+/**
+ * For Tablet and Desktop
+ */
+@media only screen and (min-width: 768px) {
+	#spin-wheels iframe {
+		width: 500px;
+		height: 500px;
+	}
+}
