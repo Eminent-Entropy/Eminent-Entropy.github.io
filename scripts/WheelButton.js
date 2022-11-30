@@ -106,7 +106,9 @@ class WheelButton {
 }
 
 let wheelButtons = [];
+let resetButton;
 document.addEventListener('DOMContentLoaded', () => {
 	let wheels = document.getElementById('spin-wheels').children;
 	WheelButton.init(wheelButtons, wheels);
+	resetButton = new ResetButton(document.getElementById('wheel-reset-button'), wheelButtons);
 });
