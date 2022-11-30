@@ -43,12 +43,14 @@ class WheelButton {
 		if (this.wheel.hidden) {
 			this.wheel.hidden = false;
 			this.hide = false;
+			this.button.style.fontWeight = 'bold';
+			this.resetWheel()
 		}
 		else {
 			this.wheel.hidden = true;
 			this.hide = true;
+			this.button.style.fontWeight = '';
 		}
-		this.resetWheel()
 	}
 	
 	/**
@@ -66,8 +68,10 @@ class WheelButton {
 	 * Lets the user know when the wheel is ready
 	 */
 	wheelLoad() {
-		if (!this.hide)
+		if (!this.hide) {
 			this.button.textContent = this.defaultText;
+			this.button.style.fontWeight = 'bold';
+		}
 	}
 	
 	/**
